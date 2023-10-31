@@ -1,0 +1,23 @@
+How too make a release
+======================
+
+1. Change the version number in UserGuide.org
+
+2. Change version number and ChangeLog in README.org
+
+3. Change the version numbers in the code (help screen and -version)
+
+4. If necessary:
+   - run maint/selftest -s
+   - run ./optool2tex --set
+   and clean out the duplicate databases.
+   Also, make sure that optool-complete gets to know about any new options.
+
+5. Run
+
+      make release version=1.2.3
+
+   The will create the files UserGuide.pdf, optool_refind.f90, and
+   optool_manual.f90.  Then all changes will be committed, the current
+   the current state will get a release tag, and then changes and tag
+   are pushed to GitHub.
