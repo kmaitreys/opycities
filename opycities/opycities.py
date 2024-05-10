@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class Model:
+class DustParticle:
     """
     This class contains all the parameters that are used in the model.
     A model intialises the default values for all the parameters that will
@@ -62,7 +62,7 @@ class Model:
 
 
 
-model = Model(14)
+model = DustParticle(14)
 
 
 print(model.lam)
